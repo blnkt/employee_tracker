@@ -13,6 +13,12 @@ describe Employee do
     expect(new_employee.division).to eq new_division
   end
 
+  # it 'has managers and subordinates' do
+  #   new_employee = Employee.create({:name => 'Bob the Builder', :manager => new_employee})
+  #   #new_employee
+  #   expect(new_employee.manager).to eq new_employee
+  # end
+
   it 'has many projects' do
     new_project = Project.create({:name => 'New Bridge'})
     another_project = Project.create({:name => 'New Tunnel'})
@@ -23,4 +29,5 @@ describe Employee do
     expect(new_employee.projects).to eq [new_project]
     expect(another_employee.projects).to eq [new_project]
   end
+
 end

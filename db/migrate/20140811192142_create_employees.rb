@@ -4,6 +4,7 @@ class CreateEmployees < ActiveRecord::Migration
       t.column :name, :string
       t.timestamps
       t.belongs_to :division
+      t.references :manager
     end
   end
 end
